@@ -11,6 +11,7 @@ int main(){
     ler(frase1,frase2);
     separarPalavras(frase1,&palavras1);
     separarPalavras(frase2,&palavras2);
-    indice(&palavras1,&palavras2);
+    float ind = indice(&palavras1,&palavras2);
+    printf("Indice Jaccard %f",ind);
     return 0;
 }
