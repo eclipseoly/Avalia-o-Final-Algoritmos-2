@@ -4,6 +4,7 @@ void ler();
 void media();
 float mediaPorNum();
 void ordenar();
+void printar();
 int main(){
     int n = 0;
     float med = 0;
@@ -19,14 +20,29 @@ int main(){
     media(n,vet,&med);
     return 0;
 }
-float mediaPorNum(int n, float *meds, int *vet, float med){
+void printar(int n,int *vet){
+    printf("Vetor ordenado: ");
     for (int i = 0; i < n; i++){
-        *(meds+i)=(float)*(vet+i)/med;
+        printf("%d, ",*(vet+i));
     }
     
 }
-void ordenar(){
-
+float mediaPorNum(int n, float *meds, int *vet, float med){
+    for (int i = 0; i < n; i++){
+        *(meds+i)=(float)*(vet+i)/med;
+    }   
+}
+void ordenar(int n, float *meds, int *vet){
+    for (int i = 0; i < n; i++){
+        for (int j = i; j < n; j++){
+            if((*(meds+i)-n) > (*(meds+j)-n)){
+                *(vet+i)=*(vet+j);
+                *(meds+i)=*(meds+j);
+            }
+        }
+        
+    }
+    
 }
 void media(int n, int *vet, float *med){
     int soma=0;
