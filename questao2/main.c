@@ -8,6 +8,7 @@ int main(){
     char frase1[200];
     char frase2[200];
     ler(frase1,frase2);
-    separarPalavras(palavras1,palavras2);
+    separarPalavras(frase1,&palavras1);
+    separarPalavras(frase2,&palavras2);
     return 0;
 }
