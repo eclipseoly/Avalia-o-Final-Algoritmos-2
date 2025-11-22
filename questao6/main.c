@@ -5,7 +5,7 @@ int main(){
     do{
         printf("Num:");
         scanf("%d",&n);
-    } while (n<=1000000 || n<0);
+    } while (n>=1000000 || n<0);
     collatz(n);
     return 0;
 }
