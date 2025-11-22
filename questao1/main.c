@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "ler.h"
 #include "valorMedio.h"
+#include "diferencas.h"
 #include "ordenar.h"
+#include "printar.h"
 int main(){
     int n;
     do{
@@ -10,6 +12,10 @@ int main(){
     }while(n>1000);
     int vet[n];
     ler(n,vet);
-    valorMedio(n,vet);
+    float med = valorMedio(n,vet);
+    float *dife;
+    dife = diferencas(n,vet,med);
+    ordernar(n,vet,dife);
+    printar(n,vet);
     return 0;
 }
