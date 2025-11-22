@@ -2,7 +2,9 @@
 void collatz(int n){
     FILE *sequenciaCollatz;
     sequenciaCollatz = fopen("./sequencia.txt", "a");
-    fprintf(sequenciaCollatz,"Seuquencia Collatz de %d: ",n);
+    fprintf(sequenciaCollatz,"\n=========================\n");
+    fprintf(sequenciaCollatz,"\nSequencia Collatz de %d: \n",n);
+    fprintf(sequenciaCollatz,"\n=========================\n");
     int x;
     for (int i = 1; i < n; i++){
         x=i;
