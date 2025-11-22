@@ -13,6 +13,7 @@ int main(){
     int vet[n];
     ler(n,vet);
     float med = valorMedio(n,vet);
+    printf("Media: %f\n",med);
     float *dife;
     dife = diferencas(n,vet,med);
     ordernar(n,vet,dife);
