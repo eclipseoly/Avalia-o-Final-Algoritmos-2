@@ -1,0 +1,3 @@
+void collatz(int n){
+    
+}
