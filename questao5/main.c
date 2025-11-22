@@ -1,5 +1,4 @@
 #include <stdio.h>
-//só estou usando essa biblioteca pra pegar o menor número real positivo que o C suporta
 #include "raizquadrada.h"
 int main(){
     float n;
