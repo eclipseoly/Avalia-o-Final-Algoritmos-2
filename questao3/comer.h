@@ -1,7 +1,8 @@
 #include "struct.h"
 #include "concatenar.h"
-void comer(Filosofo *filosofos,int rodadas){
-    int comeram=0,indice=0;
+int comer(Filosofo *filosofos,int rodadas){
+    int comeram=1,indice=0;
+    int totalPratosComidos=0;
     do{
         int garfos[5]={0};
         for (int i = 0; i < 5; i++){
@@ -10,13 +11,19 @@ void comer(Filosofo *filosofos,int rodadas){
                     concatenar((filosofos+i)->nome," COME");
                 }
                 (filosofos+i)->pratosComidos++;
+                totalPratosComidos++;
                 *(garfos+i)=1;
                 *(garfos+(i+1)%5)=1;
             }
-            if ((filosofos+i)->pratosComidos){
-                comeram++;
+        }
+        
+        for (int i = 0; i < 5; i++){
+            if (!(filosofos+i)->pratosComidos){
+                comeram=0;
             }
         }
+        
         indice++;
-    } while (comeram<5 && indice<rodadas);
+    } while (comeram==0 && indice<rodadas);
+    return totalPratosComidos;
 }

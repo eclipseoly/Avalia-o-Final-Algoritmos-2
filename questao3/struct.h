@@ -4,4 +4,4 @@ typedef struct{
     char nome[50];
     int pratosComidos;
 }Filosofo;
-#endif STRUCT_H
+#endif

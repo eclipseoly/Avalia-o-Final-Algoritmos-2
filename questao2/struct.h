@@ -6,6 +6,6 @@ typedef struct{
     int numPalavras;
     char palavras[100][200];
 }Palavras;
-#endif STRUCT_H
+#endif
 //fecha o bloco
 //usei essas funções pq uso esse arquivo em vários

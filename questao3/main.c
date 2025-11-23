@@ -12,10 +12,11 @@ int main(){
     }
     printf("Rodadas: ");
     scanf("%d",&rodadas);
-    comer(filosofos,rodadas);
+    int total = comer(filosofos,rodadas);
     for (int i = 0; i < 5; i++){
         printf("Nome: %s\n",(filosofos+i)->nome);
         printf("Pratos comidos: %d\n\n",(filosofos+i)->pratosComidos);
     }
+    printf("Total de pratos comidos: %d\n\n",total);
     return 0;
 }
