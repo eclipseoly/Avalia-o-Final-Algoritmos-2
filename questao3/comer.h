@@ -6,10 +6,12 @@ void comer(Filosofo *filosofos,int rodadas){
         int garfos[5]={0};
         for (int i = 0; i < 5; i++){
             if (garfos[i]==0 && garfos[(i+1)%5]==0){
+                if (!(filosofos+i)->pratosComidos){
+                    concatenar((filosofos+i)->nome," COME");
+                }
                 (filosofos+i)->pratosComidos++;
                 *(garfos+i)=1;
                 *(garfos+(i+1)%5)=1;
-                concatenar((filosofos+i)->nome," COME");
             }
             if ((filosofos+i)->pratosComidos){
                 comeram++;

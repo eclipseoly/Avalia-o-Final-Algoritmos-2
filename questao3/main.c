@@ -15,7 +15,7 @@ int main(){
     comer(filosofos,rodadas);
     for (int i = 0; i < 5; i++){
         printf("Nome: %s\n",(filosofos+i)->nome);
-        printf("Pratos comidos: %d",(filosofos+i)->nome);
+        printf("Pratos comidos: %d\n\n",(filosofos+i)->pratosComidos);
     }
     return 0;
 }
