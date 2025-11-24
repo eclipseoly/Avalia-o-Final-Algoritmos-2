@@ -6,7 +6,9 @@ void separarPalavras(char *frase,Palavras *pala){
             i++;
         }
         while (*(frase+i)!=' ' && *(frase+i)!='\0'){
-            *(*(pala->palavras + indPalavras) + indLetras++) = *(frase + i++);
+            *(*(pala->palavras + indPalavras) + indLetras) = *(frase + i);
+            indLetras++;
+            i++;
         }
         *(*(pala->palavras + indPalavras) + indLetras) = '\0';
         indPalavras++;

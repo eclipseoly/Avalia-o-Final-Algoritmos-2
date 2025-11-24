@@ -1,5 +1,5 @@
-#include <string.h>
 #include "struct.h"
+#include "compararPalavras.h"
 float indice(Palavras *pala1,Palavras *pala2){
     float indice;
     int inter=0;
@@ -7,7 +7,7 @@ float indice(Palavras *pala1,Palavras *pala2){
     printf("Palvras iguais: ");
     for (int i = 0; i < pala1->numPalavras; i++){
         for (int j = 0; j < pala2->numPalavras; j++){
-            if (strcmp(*(pala1->palavras + i), *(pala2->palavras + j)) == 0){
+            if (comparar(*(pala1->palavras + i), *(pala2->palavras + j)) == 0){
                 printf("%s, ",*(pala1->palavras+i));
                 inter++;
             }
