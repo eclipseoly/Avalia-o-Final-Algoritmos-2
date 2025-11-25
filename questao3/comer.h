@@ -5,6 +5,7 @@ int comer(Filosofo *filosofos,int rodadas){
     int totalPratosComidos=0;
     do{
         int garfos[5]={0};
+        comeram=1;
         for (int i = 0; i < 5; i++){
             if (*(garfos+i)==0 && *(garfos+(i+1)%5)==0){
                 if (!(filosofos+i)->pratosComidos){

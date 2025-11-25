@@ -4,6 +4,10 @@ float raiz(float n){
     float x1=n/2.0,x2=0.0;
     //palpite inicial
     float diferenca;
+    if (n==0){
+        return 0;
+    }
+    
     do{
         x2=(x1+(n/x1))/2.0;
         x1=x2;

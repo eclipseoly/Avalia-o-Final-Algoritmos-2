@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include "pares.h"
 int main(){
     int tamanhos[6];
@@ -6,7 +7,7 @@ int main(){
     for (int i = 0; i < 6; i++){
         do
         {
-            printf("Tamanhos: ");
+            printf("Tamanhos (30 a 60): ");
             scanf("%d",(tamanhos+i));
             if (*(tamanhos+i)<30 || *(tamanhos+i)>60)
             {
@@ -16,14 +17,15 @@ int main(){
         } while (*(tamanhos+i)<30 || *(tamanhos+i)>60);
         do
         {
-            printf("Lados: ");
+            printf("Lados (E ou D): ");
             scanf(" %c",(lados+i));
-            if (*(lados+i)!='D' && *(lados+i)!='E' && *(lados+i)!='d' && *(lados+i)!='e')
+            *(lados+i) = toupper(*(lados+i));
+            if (*(lados+i)!='D' && *(lados+i)!='E')
             {
                 printf("\nLado invalido\n\n");
             }
             
-        } while (*(lados+i)!='D' && *(lados+i)!='E' && *(lados+i)!='d' && *(lados+i)!='e');
+        } while (*(lados+i)!='D' && *(lados+i)!='E');
         
     }
     int par = pares(tamanhos,lados);

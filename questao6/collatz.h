@@ -6,7 +6,7 @@ void collatz(int n){
     fprintf(sequenciaCollatz,"\nSequencia Collatz de %d: \n",n);
     fprintf(sequenciaCollatz,"\n=========================\n");
     int x,seq,maiorSeq=0,numMaiorSeq=0;
-    for (int i = 1; i < n; i++){
+    for (int i = 1; i <= n; i++){
         x=i;
         seq=1;
         while(x!=1){

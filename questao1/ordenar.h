@@ -7,9 +7,9 @@ void ordernar(int n, int *vet, float *diferencas){
                 *(vet+i) = *(vet+j);
                 *(vet+j) = aux;
                 //trocando de lugar os números
-                aux = *(diferencas+i);
+                float auxdif = *(diferencas+i);
                 *(diferencas+i) = *(diferencas+j);
-                *(diferencas+j) = aux;
+                *(diferencas+j) = auxdif;
                 //tbm precisa trocar de lugar suas diferenças
             }
         }

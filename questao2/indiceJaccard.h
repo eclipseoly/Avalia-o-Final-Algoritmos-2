@@ -1,7 +1,7 @@
 #include "struct.h"
 #include "compararPalavras.h"
 float indice(Palavras *pala1,Palavras *pala2){
-    float indice;
+    float indice=0.0;
     int inter=0;
     int uniao=0;
     printf("Palvras iguais: ");

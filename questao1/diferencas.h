@@ -7,7 +7,6 @@ float *diferencas(int n, int *vet, float med){
         if (*(diferencas+i)<0){
             *(diferencas+i)*= -1;
         }
-        printf("%f\n",*(diferencas+i));
     }
     return diferencas;
 }
