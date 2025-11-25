@@ -4,6 +4,7 @@ int main(){
     float n;
     printf("Num:");
     scanf("%f",&n);
-    raiz(n);
+    float raizAproximada = raiz(n);
+    printf("Raiz aproximada de %f: %f\n",n,raizAproximada);
     return 0;
 }
